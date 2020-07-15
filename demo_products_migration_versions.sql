@@ -1,0 +1,1 @@
+INSERT INTO demo_products.migration_versions (version, executed_at) VALUES ('20200713214755', '2020-07-13 21:48:41');

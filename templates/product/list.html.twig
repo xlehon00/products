@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>List produktů</h3>
+    <div class="container">
+        {% for product in products %}
+            <div class="row mb-2">
+                <div class="col-8">
+                    <table class="table">
+                        <tr>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.code }}</td>
+                            <td>{{ product.price }}</td>
+                            <td>{{ product.category.name }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-2">
+                    <a href="{{ path('edit_product', {'productId': product.id}) }}" class="btn btn-primary">Editovat</a>
+                </div>
+                <div class="col-2">
+                    <a href="{{ path('delete_product', {'productId': product.id}) }}" class="btn btn-primary">Smazat</a>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="col">
+            <a href="{{ path('add_product') }}" class="btn btn-primary">Přidat produkt</a>
+        </div>
+    </div>
+{% endblock %}

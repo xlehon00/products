@@ -1,3 +1,20 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+list_products:
+  path: /
+  controller: App\Controller\ProductController::list
+  methods: GET|POST
+show_detail:
+  path: /detail/{productId}
+  controller: App\Controller\ProductController::detail
+  methods: GET
+add_product:
+  path: /add
+  controller: App\Controller\ProductController::add
+  methods: GET|POST
+edit_product:
+  path: /edit/{productId}
+  controller: App\Controller\ProductController::edit
+  methods: GET|POST
+delete_product:
+  path: /delete/{productId}
+  controller: App\Controller\ProductController::delete
+  methods: GET

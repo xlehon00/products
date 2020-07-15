@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>Detail produktu</h3>
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>Název</th>
+                <th>Kód</th>
+                <th>Cena</th>
+                <th>Kategorie</th>
+            </tr>
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.code }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.category.name }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col">
+        <a href="{{ path('list_products') }}" class="btn btn-primary">Zpět na list</a>
+    </div>
+{% endblock %}

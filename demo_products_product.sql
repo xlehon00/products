@@ -1,0 +1,2 @@
+INSERT INTO demo_products.product (id, category_id, name, code, price) VALUES (2, 1, 'Dětské tričko 2', 'DT2', 344);
+INSERT INTO demo_products.product (id, category_id, name, code, price) VALUES (3, 2, 'Dětské tričko 2', 'DT1', 344);
