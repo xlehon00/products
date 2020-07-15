@@ -15,7 +15,7 @@ class ProductController extends AbstractController
 {
     private ProductRepository $productRepository;
 
-    public function __construct(ProductRepository $productRepository) // $driver is need to be defined in services.yaml and autowired here
+    public function __construct(ProductRepository $productRepository)
     {
         $this->productRepository = $productRepository;
     }
